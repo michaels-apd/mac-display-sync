@@ -1,13 +1,20 @@
-# Apple Brightness Control
+# Mac Display Sync
 
-A macOS utility for controlling display brightness across multiple monitors, including Apple Studio Display and external displays.
+A macOS utility for synchronizing brightness across multiple monitors, including Apple Studio Display and LG UltraFine displays.
 
 ## Overview
 
-This project provides two main tools:
+This project provides tools for keeping brightness synchronized across mixed-brand display setups:
 
 1. **`apple-brightness`** - A Swift-based utility for controlling brightness on Apple displays (like Studio Display)
 2. **`sync-brightness.sh`** - A shell script that synchronizes brightness across multiple displays with dynamic detection and adaptive calibration
+
+## Features
+
+- **Automatic display detection** - Dynamically identifies connected displays
+- **Multi-brand support** - Works with Apple Studio Display and LG UltraFine monitors
+- **Adaptive calibration** - Adjusts brightness multipliers based on target level for better matching
+- **Single command sync** - One command to sync all displays
 
 ## Building
 
@@ -148,7 +155,7 @@ The sync script uses different multiplier strategies:
 For easy access, add this alias to your `~/.zshrc` file:
 
 ```bash
-alias brightness="~/Projects/AppleBrightness/sync-brightness.sh"
+alias brightness="~/Projects/mac-display-sync/sync-brightness.sh"
 ```
 
 Then reload your shell:
